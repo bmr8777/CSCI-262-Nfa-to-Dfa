@@ -1,0 +1,19 @@
+# File: nfa.1.38
+# this NFA recognizes any string that contains 101 or 11 as a
+# substring
+# Q - the set of states
+q1 q2 q3 q4
+# Sigma - the alphabet
+0 1
+# q_0 - the start state
+q1
+# F - the set of accept states
+q4
+# delta - the transition function
+q1 0 q1
+q1 1 q2 q1
+q2 0 q3
+q2 . q3
+q3 1 q4
+q4 0 q4
+q4 1 q4
